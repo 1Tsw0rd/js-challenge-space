@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Challenge-Space</title>
+</head>
+<body class="space-body">
+<header class="space-header">
+    <section class="clock" style="background-image: url(img/2-1.\ ui_clock.png); ">
+        <div class="clock-word">T I M E</div>
+        <div class="clock-ui-date">0000y 00m 00d Fri</div>
+        <div class="clock-ui-time">00h 00m 00s</div>
+    </section>
+</header>
+
+<!--welcome은 지쳐서 꼼수로 만들었어요..-->
+<div class="welcome-div">외계인님 환영합니다.</div>
+
+<main class="space-main">
+    <section class="weather" style="background-image: url(img/2-2.\ ui_weather.png);">
+        <div class="weather-word">W E A T H E R</div>
+        <div class="weather-data">
+            <span>City</span>
+            <span>Weather info</span>
+            <span>Wind</span>
+        </div>
+    </section>
+    <section class="navigation">
+        <img class="navigation-display" src="img/2-4. ui_navigation.png">
+        <article class="navition-jarvis">
+            <div>
+                <button class="navition-jarvis-call">Call super computer <br>▶</button>
+            </div>
+            <div>
+               <button class="navition-jarvis-up">Vol ▲</button>
+               <button class="navition-jarvis-down">Vol ▼</button>
+            </div>
+            <div>
+                <span class="navigation-jarvis-volume">100</span>
+            </div>
+        </article>
+    </section>
+    <section class="destination" style="background-image: url(img/2-3.\ ui_destination.png);">
+        <div class="destination-word">D E S T I N A T I O N</div>
+        <form class="destination-todo-form">
+            <input class="destination-todo-input" type="text" required minlength="1" maxlength="20" placeholder="Enter your destination" />
+            <input class="destination-todo-submit"type="submit" value="Add">
+          </form>
+        <ul class="destination-todo-ul"></ul>
+    </section>
+</main>
+
+<footer class="space-footer">
+    <section class="space-check">
+        <article class="space-check__center">
+            <div class="space-check__center-div1">
+            <span class="space-check__center-list">
+            <p>pilot data</p>
+            <p>Super computer check</p>
+            <p>Time system check</p>
+            <p>Weather system check</p>
+            <p>Navigation system check</p>
+            <p>Did you eat breakfast?</p>
+            <p>준비됬나?</p>
+            </span>
+            <span class="space-check__center-complete">
+                <p>[Complete]</p>
+                <p>[Complete]</p>
+                <p>[Complete]</p>
+                <p>[Complete]</p>
+                <p>[Complete]</p>
+                <p>[Complete]</p>
+                <p>[가즈아]</p>
+            </span>
+        </div>
+        <div class="space-check__center-div2">
+            <button hidden class="space-check__center-letsgo">One small step for a man, one giant leap for mankind (Click!)</button>
+        </div>
+        </article>
+        <img id="space-check__top" src="img/1-2. check_top.png">
+        <img id="space-check__bottom" src="img/1-3. check_bottom.png">
+        <img id="space-check__right" src="img/1-4. check_right.png">
+        <img id="space-check__left" src="img/1-5. check_left.png">
+    </section>
+</footer>
+
+</body>
+<iframe class="styles-no-screen-ratio__min" src="no-screen-ratio-min.html"></iframe>
+<iframe class="styles-no-screen-ratio__max" src="no-screen-ratio-max.html"></iframe>
+<iframe class="styles-no-screen-pixel__garo" src="no-screen-pixel-garo-min.html"></iframe>
+<iframe class="styles-no-screen-pixel__sero" src="no-screen-pixel-sero-min.html"></iframe>
+
+<script src="js/space.js"></script>
+<script src="js/space-clock.js"></script>
+<script src="js/space-weather.js"></script>
+<script src="js/space-destination.js"></script>
+<script src="js/space-navigation.js"></script>
+
+<script src="js/space-footer.js"></script>
+
+</html>

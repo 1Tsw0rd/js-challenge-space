@@ -1,0 +1,43 @@
+.clock {
+  height: 100%;
+  width: 30%;
+  background-size: 100% 100%;
+
+  opacity: 0.6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.clock-word {
+  font-size: 3vw;
+  font-weight: 650;
+  color: var(--ui-word-color);
+}
+
+.clock-ui-date,
+.clock-ui-time {
+  font-size: 1.5vw;
+  font-weight: 650;
+  color: var(--ui-word-color);
+}
+
+/*
+ <Animation> space.html - clock - show 
+@keyframes clockkAnimation {
+  from {
+    transform: translateY(-1000px);
+    transform-origin: top;
+  }
+  to {
+    transform: translateY(0px);
+    transform-origin: top;
+  }
+}
+
+.clock__ani {
+  animation: clockkAnimation 3s ease-in-out forwards;
+}
+*/

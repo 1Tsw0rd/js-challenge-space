@@ -1,0 +1,181 @@
+/* Footer - Space_Check */
+.space-check {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.space-check__center {
+  height: 52%;
+  width: 30%;
+
+  position: absolute;
+  top: 24%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-start;
+}
+
+.space-check__center-div1 {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.space-check__center-div2 {
+  height: 15%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-check__center p {
+  margin: 18px 10px;
+  padding-bottom: 5px;
+  font-size: 1vw;
+  font-weight: 700;
+  color: var(--main-word-color);
+  opacity: 0;
+}
+
+.space-check__center-letsgo {
+  height: 100%;
+  width: 100%;
+  margin: 20px;
+  background-color: black;
+  border: none;
+
+  opacity: 0;
+
+  font-size: 1vw;
+  font-weight: 700;
+  color: white;
+}
+
+.space-check__center-letsgo:hover,
+.space-check__center-letsgo:focus {
+  border: 4px solid var(--main-word-color);
+  border-radius: 17.5px;
+  transition: border 1s ease-in-out;
+}
+
+#space-check__top,
+#space-check__bottom {
+  height: 22%;
+  width: 100%;
+}
+
+#space-check__right,
+#space-check__left {
+  height: 100%;
+  width: 34%;
+}
+
+#space-check__top {
+  position: absolute;
+  top: 0;
+}
+#space-check__bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+#space-check__right {
+  position: absolute;
+  top: 50;
+  right: 0;
+}
+#space-check__left {
+  position: absolute;
+  left: 0;
+}
+
+/* <Animation> space.html - space-check - center */
+@keyframes space-checkAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.space-check__ani {
+  animation: space-checkAnimation 1s ease-in-out forwards;
+}
+
+/* <Animation> space.html - space-check - top,bottom,right,left */
+/* space-footer remove는 space-footer.js > fuunction hide_check_imgs 안에 setTimeout으로 설정함.. 3.1초 */
+@keyframes space-check__top-clear {
+  from {
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+  to {
+    transform: rotateX(90deg);
+    transform-origin: top;
+  }
+}
+
+@keyframes space-check__bottom-clear {
+  from {
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+  }
+  to {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes space-check__right-clear {
+  from {
+    transform: rotateY(0deg);
+    transform-origin: right;
+  }
+  to {
+    transform: rotateY(90deg);
+    transform-origin: right;
+  }
+}
+
+@keyframes space-check__left-clear {
+  from {
+    transform: rotateY(0deg);
+    transform-origin: left;
+  }
+  to {
+    transform: rotateY(90deg);
+    transform-origin: left;
+  }
+}
+
+.space-check__ani-top {
+  animation: space-check__top-clear 3s ease-in-out forwards;
+}
+
+.space-check__ani-bottom {
+  animation: space-check__bottom-clear 3s ease-in-out forwards;
+}
+
+.space-check__ani-right {
+  animation: space-check__right-clear 3s ease-in-out forwards;
+}
+
+.space-check__ani-left {
+  animation: space-check__left-clear 3s ease-in-out forwards;
+}

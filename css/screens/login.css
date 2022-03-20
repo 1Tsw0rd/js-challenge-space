@@ -1,0 +1,76 @@
+/* <CSS> index.html - login-form */
+.login-form:not([type="submit"], [type="reset"]) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form input::placeholder,
+.login-form input,
+.login-form a,
+.login-form #div__submit {
+  color: var(--main-word-color);
+  text-align: center;
+  font-weight: 650;
+}
+
+.login-form #div__reset {
+  color: red;
+}
+
+.login-form input {
+  height: 35px;
+  width: 200px;
+  margin: 25px 0px;
+  background-color: black;
+  border: none;
+}
+
+.login-form #div__submit,
+.login-form #div__reset {
+  height: 35px;
+  width: 150px;
+  margin: 20px 10px;
+  opacity: 0;
+}
+
+.login-form a {
+  margin-top: 80px;
+  padding: 5px 10px;
+  position: fixed;
+  bottom: 20%;
+}
+
+/* <Transition> index.html - login-form - input border action */
+.login-form input:hover:not(#div__reset),
+.login-form input:focus:not(#div__reset),
+.login-form a:hover,
+.login-form a:focus {
+  outline: none;
+  border: 2px solid var(--main-word-color);
+  border-radius: 17.5px;
+  transition: border 0.3s ease-in-out;
+}
+
+.login-form #div__reset:hover,
+.login-form #div__reset:focus {
+  outline: none;
+  border: 2px solid red;
+  border-radius: 14px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* <Animation> index.html login-from */
+@keyframes loginpwanimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.form_ani {
+  animation: loginpwanimation 3s ease-in-out forwards;
+}

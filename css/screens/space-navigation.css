@@ -1,0 +1,118 @@
+.navigation {
+  height: 100%;
+  width: 50%;
+  opacity: 0.6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation img {
+  height: 30%;
+  width: 30%;
+}
+
+/* <Animation> space.html - navigation-display*/
+@keyframes navigation_action {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(60deg);
+  }
+}
+
+.navigation_operating_ani {
+  animation: navigation_action 2s ease-in-out forwards;
+}
+
+@keyframes navigation_start {
+  0% {
+    transform: rotateX(60deg) rotate(0deg);
+  }
+  35% {
+    transform: rotateX(60deg) rotate(30deg);
+  }
+  70% {
+    transform: rotateX(60deg) rotate(-30deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotate(0deg);
+  }
+}
+
+.navigation_start_ani {
+  animation: navigation_start 2s ease-in-out infinite;
+}
+
+/* space.html - navigation - Jarvis */
+.navition-jarvis {
+  height: 7%;
+  width: 45%;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navition-jarvis div:first-child {
+  height: 100%;
+  width: 55%;
+}
+
+.navition-jarvis div:nth-child(2) {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navition-jarvis div:last-child {
+  height: 100%;
+  width: 15%;
+
+  color: var(--main-word-color);
+  font-size: 1vw;
+  font-weight: 650;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: blue;
+}
+
+.navition-jarvis div button {
+  background-color: transparent;
+  color: var(--main-word-color);
+  font-size: 0.9vw;
+  font-weight: 650;
+}
+
+.navition-jarvis-call {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navition-jarvis-up,
+.navition-jarvis-down {
+  height: 50%;
+  width: 80%;
+
+  box-sizing: border-box;
+}
+
+.navition-jarvis-call:hover,
+.navition-jarvis-call:focus,
+.navition-jarvis-up:hover,
+.navition-jarvis-up:focus,
+.navition-jarvis-down:hover,
+.navition-jarvis-down:focus {
+  border: 2px solid var(--main-word-color);
+  transition: border 0.3s ease-in-out;
+}
