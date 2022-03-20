@@ -17,8 +17,10 @@ const jarvis_up = document.querySelector(".navition-jarvis-up");
 const jarvis_down = document.querySelector(".navition-jarvis-down");
 const jarvis_vol = document.querySelector(".navigation-jarvis-volume");
 
-let jarvis_toggle = 1;
+let jarvis_toggle = 1;  //jarvis play 제어용
 localStorage.setItem("jarvis_toggle", jarvis_toggle);
+
+let jarvis_count = ""; //jarvis play setTimeout 제어용
 
 const jarvis_audio = new Audio();
 
@@ -39,6 +41,8 @@ function jarvis_operating(){
     }
 }
 
+
+
 function jarvis_start(){
     jarvis_audio.src = "./mp3/jarvis_sound.mp3";    
     jarvis_audio.volume = parseFloat(jarvis_volume) * 0.01;
@@ -48,13 +52,18 @@ function jarvis_start(){
     localStorage.setItem("jarvis_toggle", jarvis_toggle);
 
     if(jarvis_toggle === 0){
+<<<<<<< HEAD
         setTimeout(jarvis_stop,40000);
+=======
+    jarvis_count = setTimeout(jarvis_stop,37500);
+>>>>>>> gh-pages
     } else if(jarvis_toggle === 1){
         jarvis_stop();
     }
 }
 
 function jarvis_stop(){
+    clearTimeout(jarvis_count);
     jarvis_audio.pause();
     jarvis_call.innerHTML = "Call super computer <br>▶";
     jarvis_toggle = 1;
