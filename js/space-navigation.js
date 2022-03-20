@@ -29,19 +29,14 @@ localStorage.setItem("jarvis_vol", jarvis_volume);
 jarvis_vol.innerText = jarvis_volume;
 
 function jarvis_operating(){
-
     jarvis_toogle = localStorage.getItem("jarvis_toggle");
-
     if(jarvis_toggle === 1) {
         jarvis_start();
 
     } else if (jarvis_toggle === 0) {
         jarvis_stop();
-
     }
 }
-
-
 
 function jarvis_start(){
     jarvis_audio.src = "./mp3/jarvis_sound.mp3";    
@@ -52,11 +47,7 @@ function jarvis_start(){
     localStorage.setItem("jarvis_toggle", jarvis_toggle);
 
     if(jarvis_toggle === 0){
-<<<<<<< HEAD
-        setTimeout(jarvis_stop,40000);
-=======
     jarvis_count = setTimeout(jarvis_stop,37500);
->>>>>>> gh-pages
     } else if(jarvis_toggle === 1){
         jarvis_stop();
     }
