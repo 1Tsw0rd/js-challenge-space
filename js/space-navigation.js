@@ -48,7 +48,7 @@ function jarvis_start(){
     localStorage.setItem("jarvis_toggle", jarvis_toggle);
 
     if(jarvis_toggle === 0){
-        setTimeout(jarvis_stop,37000);
+        setTimeout(jarvis_stop,40000);
     } else if(jarvis_toggle === 1){
         jarvis_stop();
     }
